@@ -36,33 +36,37 @@ const countryOptions = [
 class Form extends Component {
 	render() {
 		return (
-			<form>
-				<div className="form-group col-md-6">
-					<label htmlFor="inputName">Name</label>
-					<input type="text" className="form-control" id="inputName" required/>
-				</div>
-				<div className="form-group col-md-6">
-					<label htmlFor="inputEmail4">Email</label>
-					<input type="email" className="form-control" id="inputEmail4" required/>
-				</div>
-				<div className="form-group col-md-6">
-					<label htmlFor="inputNumber">Contact Number</label>
-					<input type="number" className="form-control" id="inputNumber" min="1000000000" max="9999999999" required/>
-				</div>
-				<div className="form-row m-2">
+			<div className="container">
+				<form>
 					<div className="form-group col-md-6">
-						<label htmlFor="inputDob">Date of Birth</label>
-						<input type="date" className="form-control" id="inputDob" />
+						<label htmlFor="inputName">Name</label>
+						<input type="text" className="form-control" id="inputName" required/>
 					</div>
-					<div className="form-group col-md-4">
-						<label htmlFor="inputCourse">Course</label>
-						<select id="inputCourse" className="form-control" required>
-							<option selected>UG</option>
-							<option>PG</option>
-						</select>
+
+					<div className="form-group col-md-6">
+						<label htmlFor="inputEmail4">Email</label>
+						<input type="email" className="form-control" id="inputEmail4" required/>
 					</div>
-				</div>
-				
+
+					<div className="form-group col-md-6">
+						<label htmlFor="inputNumber">Contact Number</label>
+						<input type="number" className="form-control" id="inputNumber" min="1000000000" max="9999999999" required/>
+					</div>
+
+					<div className="form-row m-2">
+						<div className="form-group col-md-6">
+							<label htmlFor="inputDob">Date of Birth</label>
+							<input type="date" className="form-control" id="inputDob" />
+						</div>
+						<div className="form-group col-md-4">
+							<label htmlFor="inputCourse">Course</label>
+							<select id="inputCourse" className="form-control" required>
+								<option selected>UG</option>
+								<option>PG</option>
+							</select>
+						</div>
+					</div>
+					
 					<div className="form-group col-md-6">
 						<label htmlFor="inputCountries">Country Preference</label>
 						<Select
@@ -75,10 +79,12 @@ class Form extends Component {
 							required
 						/>
 					</div>
-				<button type="submit" className="btn btn-primary m-3">
-					Submit
-				</button>
-			</form>
+
+					<button type="submit" className="btn btn-primary m-3">
+						Submit
+					</button>
+				</form>
+			</div>
 		);
 	}
 }
