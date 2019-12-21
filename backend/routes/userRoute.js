@@ -7,9 +7,13 @@ router.post('/info', async (req, res) => {
 		name: req.body.name,
 		email: req.body.email,
 		number: req.body.number,
-		course: req.body.course,
-		country: req.body.country
+		course: req.body.course
 	};
+
+	let country = [];
+	req.body.country.map((c) => country.push(c.value));
+	user.country = country;
+
 	if (req.body.dob) {
 		user.dob = req.body.dob;
 	}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Select from 'react-select';
+import axios from 'axios'
 
 const countryOptions = [
 	{
@@ -77,9 +78,9 @@ class Form extends Component {
 			dob: this.state.dob
 		}
 
-		console.log(user)
+		axios.post('http://localhost:5000/info',user).then(res => console.log(res.data))
 
-		// window.location = '/details'
+		window.location = '/details'
 	}
 
 
