@@ -7,10 +7,12 @@ import Details from './components/details';
 function App() {
 	return (
 		<Router>
-			<Navbar />
-			<br />
-			<Route path="/" exact component={Form} />
-			<Route path="/details" component={Details} />
+			<div className="container">
+				<Navbar />
+				<br />
+				<Route path="/" exact component={Form} />
+				<Route path="/details" component={Details} />
+			</div>
 		</Router>
 	);
 }
